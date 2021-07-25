@@ -1,0 +1,96 @@
+body{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,47,121,0.7287289915966386) 48%, rgba(0,212,255,1) 100%);
+}
+.calc-grid{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    background: white;
+    grid-template-columns: repeat(4, 6rem);
+    grid-template-rows: minmax(8rem , auto) repeat(5,5.5rem);
+}
+.calc-grid button{
+    cursor: pointer;
+    font-size: 2.2rem;
+    border: 1px solid orange;
+    outline: none;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 0%;
+    font-weight: bold;
+}
+#changeTheme{
+    margin: 0.75rem 0.5rem;
+}
+.calc-grid button:hover{
+    background-color: rgb(196, 42, 42);
+}
+#spanTwo{
+    grid-column: span 2;
+}
+.output{
+    grid-column: 1 / -1;
+    background-color: rgba(179, 167, 167, 0.788);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 0.5rem;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.previous-operand{
+    color: rgba(8, 1, 1, 0.8);
+    font-size: 1.5rem;
+}
+.current-operand{
+    color: rgba(10, 1, 1, 0.9);
+    font-size: 2.5rem;
+}
+#theme{
+  background-color: #cfe6cf; 
+  border: none;
+  box-shadow: 2px 3px 3px #ffff00;
+  color: rgb(7, 2, 20);
+  padding: 0.8rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 15px;
+}
+#theme:hover{
+    color: #022a3a;
+    background-color: rgb(205, 166, 228);
+}
+.reset{
+    background-color: rgba(4, 0, 10, 0.75);
+    color: white;
+}
+.changeDisplay{
+    background-color: rgb(95, 90, 90);
+}
+.changeDisplay1{
+    color: rgba(255,255,255,0.8);
+}
+.changeDisplay2{
+    color: rgba(255,255,255,0.95);
+}
+@media(max-width:400px){
+    .calc-grid{
+        grid-template-columns: repeat(4, 4rem);
+        grid-template-rows: minmax(8rem , auto) repeat(5,3.5rem);
+    }
+    .calc-grid button{
+        font-size: 1.7rem;
+    }
+}
